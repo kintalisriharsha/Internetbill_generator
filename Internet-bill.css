@@ -317,7 +317,9 @@ h1 {
     #imageInput {
         padding: 10px;
     }
-    
+    .text-container{
+        background-color: white;
+    }
     #myImage {
         display: none;  /* Hide the image until it's uploaded */
         width: 100px;   /* Set the reduced width */
