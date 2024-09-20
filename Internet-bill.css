@@ -314,13 +314,6 @@ h1 {
     *{
         box-shadow: none;
     }
-    #acknowledgement-slip{
-        margin-bottom: 5px;
-    }
-    .table-container{
-        background-color: white;
-        outline: 30px solid black ;
-    }
     #imageInput {
         padding: 10px;
     }
@@ -334,22 +327,21 @@ h1 {
         /* border: 1px solid #ccc; */
         /* border-radius: 10px; */
     }
-    h1{
-        margin-top: -3px;
-        font-size: 12px;
-    }
     .container {
         flex-direction: column;
-    }
-    .container1{
-        line-height: 1.5;
-        font-size: 8px;
-    }
+    } 
     .form-container, .table-container {
         width: 100%;
     }
     input[type=file]{
         font-size: 13px;
+    }
+    .container1{
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    h1{
+        font-size: 18px;
     }
     table, th, td {
         font-size: 8px;
@@ -360,22 +352,8 @@ h1 {
         white-space: normal;
         word-wrap: break-word;
     }
-    #tax-table{
-        margin-top: -15px;
-    }
-    #invoice-table,#plan-table{
+    .plandetails,.recieptdetails{
         margin-top: -10px;
-    }
-    .div6{
-        margin-bottom: 5px;
-        padding: 5px;
-    }
-    .div6 h1{
-        font-size: 13px;
-    }
-    .div4 ol li{
-        font-size: 7px;
-        line-height: 2;
     }
     .plandetails tr td:nth-child(1),
     .recieptdetails tr td:nth-child(1) {
@@ -392,15 +370,20 @@ h1 {
         font-size: 6px;
         padding: 0;
     }
-
-    .plandetails table,
-    .recieptdetails table {
-        margin-top: 5px;
-       margin-bottom: 7px;
-       margin-left: 5px;
-       margin-right: 5px;
+    #tax-table{
+        margin-top: -10px;
     }
-    #acknowledgement-slip{
-        margin-top: -8px
+    #plan-table,#invoice-table{
+        margin-top: -12px;
+    }
+    .div6{
+        padding: 11px;
+    }
+    .div6 h1{
+        font-size: 12px;
+    }
+    .div4{
+        line-height: 1.4;
+        font-size: 12px;
     }
 }
