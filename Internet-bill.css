@@ -28,7 +28,7 @@
 } */
 .table-container {
     outline: 35px solid white;
-    background-color: rgba(238, 240, 240, 0.893);
+    background-color: rgba(255, 255, 255);
     height: max-content;
     width: 45%;
     margin-top: 45px;
@@ -317,8 +317,9 @@ h1 {
     #imageInput {
         padding: 10px;
     }
-    .text-container{
+    .table-container{
         background-color: white;
+        box-shadow: 0px 0px 20px 40px rgba(227, 208, 227, 0.668);
     }
     #myImage {
         display: none;  /* Hide the image until it's uploaded */
@@ -385,7 +386,7 @@ h1 {
         font-size: 12px;
     }
     .div4{
-        line-height: 1.2;
+        line-height: 1.0;
         font-size: 12px;
     }
 }
