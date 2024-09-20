@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.container1{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.form-container {
+    width:48%; /* Adjust width as needed */
+}
+/* #generatedInvoiceNo{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+} */
+.table-container {
+    outline: 35px solid white;
+    background-color: rgba(238, 240, 240, 0.893);
+    height: max-content;
+    width: 45%;
+    margin-top: 45px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 20px 40px rgba(227, 208, 227, 0.668);
+    padding: 0; /* Remove padding if there is any */
+    overflow-x: auto; /* Allow scrolling on small screens */
+    font-size: 12px;
+}
+
+fieldset, table {
+    margin: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgb(195, 195, 222);
+}
+
+legend {
+    font-size: 23px;
+    color: #008080;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+select
+{
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%; 
+    font-size: 17px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('down-chevron.png'); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    box-shadow: 8px 8px 15px rgb(195, 195, 222);
+    border: 1px solid white;
+    outline: none;
+}
+#imageInput{
+    position: relative;
+}
+::-webkit-file-upload-button{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: transparent;
+}
+.container3 {
+    display: flex;
+    justify-content: space-between;  /* Distribute space between text and image */
+    align-items: flex-start;         /* Align items at the start (top) */
+}
+
+.img-container {
+    display: flex;
+    justify-content: flex-end;       /* Align image to the right */
+    align-items: center;             /* Center the image vertically */
+    padding: 10px;
+}
+
+#myImage {
+    display: none;                   /* Initially hidden */
+    width: 200px;                    /* Set a fixed width for the image */
+    height: auto;   
+    margin-bottom: 30px;                 /* Keep the aspect ratio */
+}
+
+option
+{
+    padding: 30px;
+    background-color: white;
+}
+.officeaddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+
+.table-container > p {
+    text-align: center;
+    /* font-size: 13px; */
+}
+button {
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 2px solid #008080;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%; /* Makes the table fill the container */
+    border-collapse: collapse;
+    margin: 0;
+    text-align: center;
+    margin-top: -20px;
+}
+
+th {
+    background-color: orange;
+}
+
+tr, th, td {
+    border: 2px solid orange;
+    padding: 10px;
+    /* font-size: 16px; */
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+    color: green;
+}
+
+.div4 {
+    margin: -10px 20px -10px 20px;
+    padding: 10px 20px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.div6 {
+    margin: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: orange;
+    text-align: center;
+}
+#tax-table{
+    margin-top: 5px;
+}
+#acknowledgement-slip{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#imageInput {
+    padding: 10px;
+}
+
+#myImage {
+    display: none;  /* Hide the image until it's uploaded */
+    width: 200px;   /* Set the reduced width */
+    height: auto;   /* Maintain aspect ratio */
+    margin-top: 10px;
+    margin-right: 20px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 10px; */
+}
+.table-container h1 {
+    text-align: center;
+}
+
+.plandetails tr td:nth-child(1) {
+    font-size: 20px;
+    font-weight: 900;
+    padding-right: 100px;
+}
+
+.plandetails tr td {
+    padding-right: 50px;
+    padding-top:0 ;
+}
+
+.plandetails table {
+    margin-bottom:10px;
+    box-shadow: none;
+    margin-top: 20px;
+}
+
+.plandetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.recieptdetails tr td:nth-child(1) {
+    font-size: 20px;
+    font-weight: 900;
+    padding-right: 100px;
+}
+
+.recieptdetails tr td {
+    padding-right: 50px;
+    padding-top:0 ;
+}
+
+.recieptdetails table {
+    margin-bottom: 10px;
+    box-shadow: none;
+    margin-top: 20px;
+}
+
+.recieptdetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.table-container {
+    display: block; /* Ensure the table container is visible by default */
+}
+
+/* body {
+    font-family: 'Roboto Slab', serif;
+}
+
+
+@media print {
+
+    body * {
+        visibility: hidden; 
+        font-size: 10px;
+    }
+
+    .table-container, .table-container * {
+        visibility: visible; 
+    }
+
+    .table-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .div6{
+        margin-top: -40px;
+    }
+    .div4{
+        line-height: 15px;
+        margin-top: -40px;
+    }
+    tr th{
+        padding: 5px;
+    }
+    td{
+        padding: 10px;
+    }
+} */
+
+
+/* Responsive Styles */
+@media screen and (min-width:1001px) and (max-width:1439px) {
+    tr th {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    *{
+        box-shadow: none;
+    }
+    #acknowledgement-slip{
+        margin-bottom: 5px;
+    }
+    .table-container{
+        background-color: white;
+        outline: 30px solid black ;
+    }
+    #imageInput {
+        padding: 10px;
+    }
+    
+    #myImage {
+        display: none;  /* Hide the image until it's uploaded */
+        width: 100px;   /* Set the reduced width */
+        height: auto;   /* Maintain aspect ratio */
+        margin-top: 10px;
+        margin-right: 20px;
+        /* border: 1px solid #ccc; */
+        /* border-radius: 10px; */
+    }
+    h1{
+        margin-top: -3px;
+        font-size: 12px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container1{
+        line-height: 1.5;
+        font-size: 8px;
+    }
+    .form-container, .table-container {
+        width: 100%;
+    }
+    input[type=file]{
+        font-size: 13px;
+    }
+    table, th, td {
+        font-size: 8px;
+        padding: 3px;
+        margin-top: 0px;
+    }
+    th, td {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    #tax-table{
+        margin-top: -15px;
+    }
+    #invoice-table,#plan-table{
+        margin-top: -10px;
+    }
+    .div6{
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+    .div6 h1{
+        font-size: 13px;
+    }
+    .div4 ol li{
+        font-size: 7px;
+        line-height: 2;
+    }
+    .plandetails tr td:nth-child(1),
+    .recieptdetails tr td:nth-child(1) {
+        font-size: 8px;
+        font-weight: 900;
+        /* padding: 0; */
+    }
+    .officeaddress{
+        font-size: 8px;
+        height: 50px;
+    }
+    .plandetails tr td,
+    .recieptdetails tr td {
+        font-size: 6px;
+        padding: 0;
+    }
+
+    .plandetails table,
+    .recieptdetails table {
+        margin-top: 5px;
+       margin-bottom: 7px;
+       margin-left: 5px;
+       margin-right: 5px;
+    }
+    #acknowledgement-slip{
+        margin-top: -8px
+    }
+}

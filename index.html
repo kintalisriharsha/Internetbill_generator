@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internet Bill</title>
+        <link rel="stylesheet" href="Internet-bill.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350&display=swap" rel="stylesheet">
+        <script src="internet-bill1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <form id="form">
+                    <div class="div1">
+                        <fieldset>
+                            <legend>Internet Provider Details</legend>
+                            <label for="Name">Internet Service Provider Name</label>
+                            <input type="text" placeholder="Internet Service Provider Name, airtel, bsnl, jio, act etc" id='Service'>
+                            <div class="error"></div>
+
+                            <label for="Address">Internet Service Provider Address</label>
+                            <input type="text" placeholder="Internet Provider Address" id='provider'>
+                            <div class="error"></div>
+
+                            <label for="Description">Description</label>
+                            <input type="text" placeholder="Internet Description" id='Description'>
+
+                            <label for="AcNo">Bill Account Number</label>
+                            <input type="text" placeholder="Bill Account Number" id="billnumber">
+                            <div class="error"></div>
+
+                            <label for="Date">Billing Date</label>
+                            <input type="date" placeholder="15 sep 2024" id="calander">
+                            <div class="error"></div>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="div1">
+                        <fieldset>
+                            <legend>Customer Details</legend>
+                            <label for="Name">Customer Name</label>
+                            <input type="text" placeholder="Enter Customer Name" id="Customername">
+                            <div class="error"></div>
+
+                            <label for="Address">Address</label>
+                            <input type="text" placeholder="Customer Address" id="Customeraddress">
+                            <div class="error"></div>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="div1">
+                        <fieldset>
+                            <legend>Plan Details</legend>
+                            <label for="Speed">Tariff Plan Speed</label>
+                            <select id="speed" aria-label="Speed" data-required="true">
+                                <option value="Select One">Select One</option>
+                                <option value="1Gbps">1Gbps</option>
+                            </select>
+                            <div class="error"></div>
+
+                            <label for="Package">Tariff Plan Package</label>
+                            <select id="Package" aria-label="Package" data-required="true">
+                                <option value="Select One">Select One</option>
+                                <option value="Unlimited">Unlimited</option>
+                            </select>
+                            <div class="error"></div>
+
+                            <label for="Tp">Tariff Plan</label>
+                            <select aria-label="Plan" id="plan" data-required="true">
+                                <option value="Select one">Select One</option>
+                                <option value="Monthly">Monthly</option>
+                            </select>
+                            <div class="error"></div>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="div1">
+                        <fieldset>
+                            <legend>Payment Details</legend>
+                            <label for="Currency">Currency</label>
+                            <select aria-label="Currency" id="Curr" data-required="true" >
+                                <option value="Select One">Select One</option>
+                                <option value="Indian">Indian Rupee - &#8377;</option>
+                            </select>
+                            <div class="error"></div>
+
+                            <label for="Method">Payment Method</label>
+                            <select aria-label="method" id="Payment" data-required="true" >
+                                <option value="Select One">Select One</option>
+                                <option value="Cash">Cash</option>
+                                <option value="Online">Online</option>
+                                <option value="Check">Check</option>
+                            </select>
+                            <div class="error"></div>
+
+                            <label for="Amount">Total Plan Amount</label>
+                            <input type="number" placeholder="Plan Amount" id="Amount">
+                            <div class="error"></div>
+                        </fieldset>
+                    </div>
+                    <div class="div1">
+                        <fieldset>
+                            <legend>Logo Details</legend>
+                            <label for="Logo">Logo</label>
+                            <input type="file" placeholder="filename" id="imageInput" accept="image/*">
+                        </fieldset>
+                    </div>
+                    <div class="div1">
+                        <fieldset>
+                            <legend>File Details</legend>
+                            <label for="DFN">Download File Name</label>
+                            <input type="text" placeholder="File Name" id="filename">
+                            <div class="error"></div>
+
+                            <label for="No">Invoice No</label>
+                            <input type="text" placeholder="Invoice input" id="invoicenumber">
+                            <div class="error"></div>
+                        </fieldset>
+                    </div>
+                    
+                    <div class="div-container">
+                        <button id="download" onclick="downloadPdf(); return false;">Download PDF</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="table-container" id="capture">
+                <h1>Internet Bill</h1>
+                <div class="container3">
+                    <div class="container1">
+                        <p>Name : </p>
+                        <p>Account No :</p>
+                        <p>Invoice No :</p>
+                        <p>Customer Name :</p>
+                        <p>Bill Date :</p>
+                        <p>Address :</p>
+                    </div>
+                    <div class=".img-container">
+                        <img id="myImage" alt="Uploaded Image" width="100px">
+                    </div>
+                </div>
+                <table id="tax-table">
+                    <tr>
+                        <th>Taxable Amount &#8377;</th>
+                        <th>CGST Rate %</th>
+                        <th>CGST Amount %</th>
+                        <th>SGST Rate %</th>
+                        <th>SGST Amount &#8377;</th>
+                        <th>Payment Received &#8377;</th>
+                    </tr>
+                    <tr id="tax-row">
+                        <td></td>
+                        <td>9%</td>
+                        <td></td>
+                        <td>9%</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="plandetails">
+                    <table>
+                    <tr id="plan-details">
+                        <td>Service Plan Summary</td><td>Account No:</td><td>User Name:</td>
+                    </tr>
+                    </table>
+                </div>
+                <table id="plan-table">
+                    <tr>
+                        <th>Plan Speed</th>
+                        <th>Plan Package</th>
+                        <th>Plan Validity</th>
+                        <th>Discount</th>
+                        <th>Plan Amount</th>
+                    </tr>
+                    <tr id="plan-row">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="recieptdetails">
+                    <table>
+                    <tr id="reciept-details">
+                        <td>Reciept Details</td><td>Account No:</td><td>User Name:</td>
+                    </tr>
+                    </table>
+                </div>
+                <table id="invoice-table">
+                    <tr>
+                        <th>Invoice No:</th>
+                        <th>Internet Service Description</th>
+                        <th>Amount Incl. Tax</th>
+                    </tr>
+                    <tr id="invoice-row">
+                        <td></td>
+                        <td></td>
+                        <td>&#8377;</td>
+                    </tr>
+                </table>
+                <div class="officeaddress">
+                    <p>Registered office address : </p>
+                </div>
+                <div class="div6">
+                    <h1>Terms and Conditions</h1>
+                </div>
+                <div class="div4">
+                    <ol>
+                        <li>Cheques to be in favour of "".</li>
+                        <li>In case of cheque bounce, ₹ 100/- penalty will be applicable.</li>
+                        <li>Shall levy late fee charge in case the bill is paid after the due date.</li>
+                        <li>In case of overdue, the right to deactivate your services is reserved.</li>
+                        <li>This Invoice is system generated hence signature and stamp are not required.</li>
+                    </ol>
+                </div>
+                <table id="acknowledgement-slip">
+                    <tr>
+                        <th colspan="4">Acknowledgement Slip</th>
+                    </tr>
+                    <tr>
+                        <td id="acknowledgement-account-no"></td>
+                        <td id="acknowledgement-payment-method"></td>
+                        <td id="acknowledgement-subscriber-name"></td>
+                        <td id="acknowledgement-invoice-number"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
