@@ -307,16 +307,16 @@ export default function InternetBillGenerator() {
   
   
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">Internet Bill Generator</h1>
+        <h1 className="text-3xl font-bold text-center text-black mb-12">Internet Bill Generator</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-8">
             <div className="space-y-6">
               <fieldset className="border border-gray-300 p-4 rounded-md mb-6">
-                <legend className="text-lg font-semibold text-gray-800 px-2">Internet Provider Details</legend>
+                <legend className="text-lg font-semibold text-black px-2">Internet Provider Details</legend>
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-800">
+                  <label htmlFor="service" className="block text-sm font-medium text-black">
                     Internet Service Provider Name
                   </label>
                   <input
@@ -325,11 +325,11 @@ export default function InternetBillGenerator() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="text-black mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Internet Service Provider Name, airtel, bsnl, jio, act etc"
                   />
                   <br />
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-800">
+                  <label htmlFor="address" className="block text-sm font-medium text-black">
                     Internet Service Provider Address
                   </label>
                   <input
@@ -338,11 +338,11 @@ export default function InternetBillGenerator() {
                     name="address"
                     value={formData.address}
                     onChange={handleInputChange}
-                    className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="text-black mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Internet Service Provider Address"
                   />
                   <br />
-                  <label htmlFor="description" className="block text-sm font-medium text-gray-800">
+                  <label htmlFor="description" className="block text-sm font-medium text-black">
                     Description
                   </label>
                   <input
@@ -351,11 +351,11 @@ export default function InternetBillGenerator() {
                     name="description"
                     value={formData.description}
                     onChange={handleInputChange}
-                    className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="text-black mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Internet Description"
                   />
                   <br />
-                  <label htmlFor="billNumber" className="block text-sm font-medium text-gray-800">
+                  <label htmlFor="billNumber" className="block text-sm font-medium text-black">
                     Bill Number
                   </label>
                   <input
@@ -364,12 +364,12 @@ export default function InternetBillGenerator() {
                     name="billNumber"
                     value={formData.billNumber}
                     onChange={handleInputChange}
-                    className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="text-black mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Bill Account Number"
                   />
                   <br />
                   {/* Date Picker with Calendar Icon */}
-                  <label htmlFor="billingDate" className="block text-sm font-medium text-gray-800 mb-3">
+                  <label htmlFor="billingDate" className="block text-sm font-medium text-black mb-3">
                     Billing Date
                   </label>
                   <TextField
@@ -403,28 +403,28 @@ export default function InternetBillGenerator() {
                 </div>
               </fieldset>
               <fieldset className='border border-gray-300 p-4 rounded-md mb-6'>
-                <legend className='text-lg font-semibold text-gray-800 px-2'>Customer Details</legend>
-                <label htmlFor="customerName" className='block text-sm font-medium text-gray-800'>Customer Name</label>
+                <legend className='text-lg font-semibold text-black px-2'>Customer Details</legend>
+                <label htmlFor="customerName" className='block text-sm font-medium text-black'>Customer Name</label>
                 <input type="text"
                 id='customerName'
                 name='customerName'
                 placeholder='Enter Customer Name'
                 value={formData.customerName}
                 onChange={handleInputChange}
-                className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                className="mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                 <br />
-                <label htmlFor="customerAddress" className='block text-sm font-medium text-gray-800'>Address</label>
+                <label htmlFor="customerAddress" className='block text-sm font-medium text-black'>Address</label>
                 <input type="text"
                 id='customerAddress'
                 name='customerAddress'
                 placeholder='Enter Customer Address'
                 value={formData.customerAddress}
                 onChange={handleInputChange}
-                className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                className="mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
               </fieldset>
               <fieldset className='border border-gray-300 p-4 rounded-md mb-6'>
-                <legend className='text-lg font-semibold text-gray-800 px-2'>Plan Details</legend>
-                <label htmlFor="speed" className='mb-3 block text-sm font-medium text-gray-800'>Tariff Plan Speed</label>
+                <legend className='text-lg font-semibold text-black px-2'>Plan Details</legend>
+                <label htmlFor="speed" className='mb-3 block text-sm font-medium text-black'>Tariff Plan Speed</label>
                  <CreatableSelect 
                     name='speed' 
                     isClearable
@@ -435,7 +435,7 @@ export default function InternetBillGenerator() {
                     classNamePrefix="select"
                     />
                     <br />
-                <label htmlFor="package" className='mb-3 block text-sm font-medium text-gray-800'>Tariff Plan Package</label>
+                <label htmlFor="package" className='mb-3 block text-sm font-medium text-black'>Tariff Plan Package</label>
                 <CreatableSelect 
                     name='package' 
                     isClearable
@@ -446,7 +446,7 @@ export default function InternetBillGenerator() {
                     classNamePrefix="select"
                     />
                     <br />
-                    <label htmlFor="plan" className='mb-3 block text-sm font-medium text-gray-800'>Tariff Plan</label>
+                    <label htmlFor="plan" className='mb-3 block text-sm font-medium text-black'>Tariff Plan</label>
                     <CreatableSelect 
                     name='plan' 
                     isClearable
@@ -459,8 +459,8 @@ export default function InternetBillGenerator() {
                     <br />    
               </fieldset>
               <fieldset className='border border-gray-300 p-4 rounded-md mb-6'>
-                <legend className='text-lg font-semibold text-gray-800 px-2'>Payment Details</legend>
-                <label htmlFor="currency" className='mb-3 block text-sm font-medium text-gray-800'>Currency </label>
+                <legend className='text-lg font-semibold text-black px-2'>Payment Details</legend>
+                <label htmlFor="currency" className='mb-3 block text-sm font-medium text-black'>Currency </label>
                  <CreatableSelect 
                     name='currency' 
                     isClearable
@@ -471,7 +471,7 @@ export default function InternetBillGenerator() {
                     classNamePrefix="select"
                     />
                     <br />
-                <label htmlFor="paymentMethod" className='mb-3 block text-sm font-medium text-gray-800'>Payment method</label>
+                <label htmlFor="paymentMethod" className='mb-3 block text-sm font-medium text-black'>Payment method</label>
                  <CreatableSelect 
                     name='paymentMethod' 
                     isClearable
@@ -482,28 +482,28 @@ export default function InternetBillGenerator() {
                     classNamePrefix="select"
                     />
                     <br />
-                  <label htmlFor='amount'  className='block text-sm font-medium text-gray-800'>Total Plan Amount</label>
+                  <label htmlFor='amount'  className='block text-sm font-medium text-black'>Total Plan Amount</label>
                   <input 
                   type='number'
                   placeholder='Plan Amount'
                   name='amount'
                   value={formData.amount}
                   onChange={handleInputChange}
-                  className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+                  className="mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
               </fieldset>
               <fieldset className='border border-gray-300 p-4 rounded-md mb-6'>
-                <legend className='text-lg font-semibold text-gray-800 px-2'>Logo Details</legend>
-                <label htmlFor='logo'  className='block text-sm font-medium text-gray-800'>Logo</label>
+                <legend className='text-lg font-semibold text-black px-2'>Logo Details</legend>
+                <label htmlFor='logo'  className='block text-sm font-medium text-black'>Logo</label>
                 <input type="file"
                 placeholder='none'
                 name='logo'
                 id='logo'
                 onChange={handleInputChange}
-                className='mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' />
+                className='mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' />
               </fieldset>
               <br />
               <fieldset className='border border-gray-300 p-4 rounded-md mb-6'>
-                <legend className='text-lg font-semibold text-gray-800 px-2'>File Details</legend>
+                <legend className='text-lg font-semibold text-black px-2'>File Details</legend>
                 <label htmlFor='filename'>Download File Name</label>
                 <input type="text"
                 placeholder='File Name'
@@ -511,7 +511,7 @@ export default function InternetBillGenerator() {
                 id='filename'
                 value={formData.filename}
                 onChange={handleInputChange}
-                className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                className="mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                 <br />
                 <label htmlFor='invoiceNumber'>Invoice Number</label>
                 <input type="text"
@@ -520,7 +520,7 @@ export default function InternetBillGenerator() {
                 id='invoiceNumber'
                 value={formData.invoiceNumber}
                 onChange={handleInputChange}
-                className="mt-3 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                className="mt-3 block text-black w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
               </fieldset>
             </div>
             <button
@@ -531,25 +531,25 @@ export default function InternetBillGenerator() {
             </button>
           </form>
 
-          <div ref={previewRef} className="bg-white shadow-md rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Internet Bill Preview</h2>
+          <div ref={previewRef} className="bg-white shadow-md rounded-lg p-8 text-black">
+            <h2 className="text-2xl font-semibold text-black mb-6">Internet Bill Preview</h2>
             {/* Bill Preview Section */}
             <div className="flex justify-between items-start space-y-1 leading-none">
             <div>
-              <p className='text-sm text-gray-800' >
+              <p className='text-sm text-black' >
                 <span className="text-gray-600 text-base">Name:</span> {formData.service}
               </p>
-              <p className='text-sm text-gray-800' >
+              <p className='text-sm text-black' >
                 <span className="text-gray-600 text-base">Bill Number:</span> {formData.billNumber}
               </p>
-              <p className='text-xs text-gray-800' >
+              <p className='text-xs text-black' >
                 <span className="text-gray-600 text-base">Customer Name:</span> {formData.customerName}
               </p>
-              <p className='text-sm text-gray-800' >
+              <p className='text-sm text-black' >
                 <span className="text-gray-600 text-base">Bill Date:</span>{' '}
                   {formData.billingDate ? formData.billingDate.format('DD-MM-YYYY') : ''}
               </p>
-              <p className='text-sm text-gray-800' >
+              <p className='text-sm text-black' >
                 <span className="text-gray-600 text-base">Address:</span> {formData.address}
               </p>
           </div>
@@ -557,7 +557,7 @@ export default function InternetBillGenerator() {
           </div>
 
           <div  ref={previewRef} className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Tax Details</h3>
+            <h3 className="text-xl font-semibold text-black mb-4">Tax Details</h3>
   
   {/* Add overflow container for small screens */}
               <div className="mt-8 overflow-x-auto">
