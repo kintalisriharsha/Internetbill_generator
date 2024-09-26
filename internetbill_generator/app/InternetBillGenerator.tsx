@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import * as React from 'react';
@@ -7,15 +9,11 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { useState, useEffect, useRef, ChangeEvent } from 'react';
 import html2canvas from 'html2canvas';
 import {jsPDF} from 'jspdf';
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import { IconButton, InputAdornment, TextField } from '@mui/material';
 import { FaCalendarAlt } from 'react-icons/fa';
 import CreatableSelect from 'react-select/creatable';
-import { ClassNames } from '@emotion/react';
 import 'app/InternetBillGenerator.css'
-import {autoTable} from 'jspdf-autotable';
-import { fontSize, style } from '@mui/system';
-
 
 interface FormData {
   service: string;
@@ -111,7 +109,6 @@ export default function InternetBillGenerator() {
     if (!previewRef.current) return;
 
     html2canvas(previewRef.current).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
       const pageWidth = pdf.internal.pageSize.getWidth();
       const pageHeight = pdf.internal.pageSize.getHeight();
@@ -652,7 +649,7 @@ export default function InternetBillGenerator() {
               <div className='border-2 mt-3 rounded-lg'>
                 <h1 className='text-red-500 text-3xl text-center m-5'>Terms and Conditions</h1>
                 <ol className='pr-8 pl-8 pb-6'>
-                    <li>1. Cheques to be in favour of "".</li>
+                    <li>1. Cheques to be in favour of &quot;&quot;.</li>
                     <li>2. In case of cheque bounce, ₹ 100/- penalty will be applicable.</li>
                     <li>3. Shall levy late fee charge in case the bill is paid after the due date.</li>
                     <li>4. In case of overdue, the right to deactivate your services is reserved.</li>
