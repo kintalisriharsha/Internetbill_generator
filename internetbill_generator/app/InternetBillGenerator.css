@@ -1,0 +1,18 @@
+/* For Chrome, Safari, Edge, and Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=file]{
+    position: relative;
+}
+::-webkit-file-upload-button{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: transparent;
+}
