@@ -609,7 +609,7 @@ export default function InternetBillGenerator() {
                 <legend className="text-lg font-semibold text-black px-2">
                   File Details
                 </legend>
-                <label htmlFor="filename">Download File Name</label>
+                <label htmlFor="filename" className="block text-sm font-medium text-black">Download File Name</label>
                 <input
                   type="text"
                   placeholder="File Name"
@@ -620,7 +620,7 @@ export default function InternetBillGenerator() {
                   className="mt-3 text-black block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
                 <br />
-                <label htmlFor="invoiceNumber">Invoice Number</label>
+                <label htmlFor="invoiceNumber" className="block text-sm font-medium text-black">Invoice Number</label>
                 <input
                   type="text"
                   placeholder="Invoice Number"
