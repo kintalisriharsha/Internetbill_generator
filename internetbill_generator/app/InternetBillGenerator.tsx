@@ -152,10 +152,10 @@ export default function InternetBillGenerator() {
       const cellHeight = 10;
 
       // Headers
-      pdf.setTextColor(255,255,255);
+      pdf.setTextColor(0,0,0);
       pdf.setFontSize(9);
       headers.forEach((header: string, index: number) => {
-        pdf.setFillColor(0,0,0)
+        pdf.setFillColor(255, 165, 0);
         pdf.rect(margin + index * cellWidth, startY, cellWidth, cellHeight, 'F');
         const xPos = margin + index * cellWidth + 2;
         const yPos = startY + cellHeight / 2 + 3;
@@ -194,11 +194,12 @@ export default function InternetBillGenerator() {
 
     // Service Plan Summary
     yPos += 15;
-    pdf.setFontSize(20);
-    pdf.text("Service Plan Summary", margin, yPos);
     pdf.setFontSize(10);
+    pdf.text("Service Plan Summary", margin, yPos);
     pdf.text(`Account No: ${formData.billNumber}`, margin + 80, yPos);
     pdf.text(`UserName: ${formData.customerName}`, margin + 120, yPos);
+    pdf.rect(margin, yPos - 6, pageWidth - 2 * margin, 15);
+    pdf.setDrawColor(0, 0, 0);
     yPos += 3;
 
     const planHeaders = ["Plan Speed", "Plan Package", "Plan Validity", "Discount", "Plan Amount"];
@@ -208,11 +209,11 @@ export default function InternetBillGenerator() {
 
     // Receipt Details
     yPos += 15;
-    pdf.setFontSize(20);
-    pdf.text("Receipt Details", margin, yPos);
     pdf.setFontSize(10);
+    pdf.text("Receipt Details", margin, yPos);
     pdf.text(`Account No: ${formData.billNumber}`, margin + 80, yPos);
     pdf.text(`UserName: ${formData.customerName}`, margin + 120, yPos);
+    pdf.rect(margin, yPos - 6, pageWidth - 2 * margin, 15);
     yPos += 3;
 
     const receiptHeaders = ["Invoice No:", "Internet Service Description", "Amount Incl. Tax"];
@@ -251,7 +252,9 @@ export default function InternetBillGenerator() {
 
     pdf.setDrawColor(211, 211, 211);
     pdf.setLineWidth(0.75);
-    pdf.roundedRect(margin, yPos - 5 * 10 - 8, pageWidth - margin * 2 + 0.5, 5 * 5 + 45, 5, 5);
+    pdf.setLineWidth(1);
+    pdf.setDrawColor(211, 211, 211);
+    pdf.rect(margin / 2, margin / 2, pageWidth - margin, pageHeight - margin);
 
     // Acknowledgment Slip
     yPos += 20;
